@@ -1,0 +1,5 @@
+"hole_diameter" = 3.0
+"die_clearance" = 0.2
+"punch_base" = 30
+"die_base" = 60
+"cutting_force" = 96.0
