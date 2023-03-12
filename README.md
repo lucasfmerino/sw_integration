@@ -19,7 +19,7 @@ Neste exemplo, você aprenderá como criar as suas variáveis personalizadas uti
 ## Dependências:
 No Python, para essa integração, usaremos apenas os recursos e bibliotecas nativas da linguagem.
 Como trata-se de uma integração, é necessário que o SolidWorks esteja devidamente instalado.
-É indicado conhecimentos básicos em SolidWorks ou em softwares de modelagem 3D similares.
+É indicado conhecimento básico em SolidWorks ou em softwares de modelagem 3D similares.
 <br>
 <br>
 
@@ -93,6 +93,15 @@ Como resultado do nosso exemplo, temos o nosso arquivo de texto com o seguinte c
 </div>
 
 ## PASSO 3 - Adicionar as variáveis ao SolidWorks
+
+<div>
+    <p>
+        Agora, dentro do SoldWorks, precisamos acessar o painel de equações que pode ser encontrado na aba de ferramentas, como demonstrado na imagem.
+    </p>
+</div>
+
+<img src="src/images/tool_equations.png" alt="equations" style="height: 500px;">
+
 
 
 <h4 align="center"> 
