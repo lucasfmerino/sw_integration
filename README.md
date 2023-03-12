@@ -1,4 +1,7 @@
-# sw_integration
+<h1 align="center">
+  <img alt="sw_integration" title="#sw_integration" src="src/sw_integration_01.png" />
+</h1>
+<br>
 Esta é uma demonstração simples para integrar o Python com o SolidWorks e melhorar a eficiência nos projetos.
 
 
@@ -11,7 +14,10 @@ Neste exemplo, você aprenderá como criar as suas variáveis personalizadas uti
 
 
 # Dependências
-Para essa integração usaremos apenas os recursos nativos do Python, mas é indicado conhecimentos básicos em SolidWorks.
+No Python, para essa integração, usaremos apenas os recursos e bibliotecas nativas da linguagem.
+Como trata-se de uma integração, é necessário que o SolidWorks esteja devidamente instalado.
+É indicado conhecimentos básicos em SolidWorks ou em softwares de modelagem 3D similares.
+
 
 
 <h4 align="center"> 
