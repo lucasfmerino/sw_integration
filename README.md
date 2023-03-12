@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="sw_integration" title="#sw_integration" src="src/sw_integration_01.png" />
+  <img src="src/images/sw_integration_01.png" alt="sw_integration_01">
 </h1>
 <br>
 Esta é uma demonstração simples para integrar o Python com o SolidWorks e melhorar a eficiência nos projetos.
