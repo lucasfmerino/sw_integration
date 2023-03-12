@@ -88,7 +88,6 @@ def apply():
         file.writelines(f'"die_clearance" = {die_clearance()}\n')
         file.writelines(f'"punch_base" = {punch_base()}\n')
         file.writelines(f'"die_base" = {die_base()}\n')
-        file.writelines(f'"cutting_force" = {cutting_force()}\n')
     label_04b['text'] = f'{cutting_force():.2f} kgf'
 
 
