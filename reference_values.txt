@@ -1,4 +1,4 @@
-"hole_diameter" = 3.0
-"die_clearance" = 4.8
+"hole_diameter" = 12.7
+"die_clearance" = 0.4
 "punch_base" = 30
 "die_base" = 60

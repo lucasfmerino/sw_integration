@@ -7,7 +7,7 @@ def hole_diameter():
     if not entry_01.get() == '':
         try:
             diameter = float(entry_01.get())
-        except EXCEPTION:
+        except:
             diameter = 10
     else:
         diameter = 10
@@ -18,7 +18,7 @@ def shear_stress():
     if not entry_02.get() == '':
         try:
             ss = float(entry_02.get())
-        except EXCEPTION:
+        except:
             ss = 0
     else:
         ss = 0
@@ -29,7 +29,7 @@ def plate_thickness():
     if not entry_03.get() == '':
         try:
             pt = float(entry_03.get())
-        except EXCEPTION:
+        except:
             pt = 0
     else:
         pt = 0

@@ -15,11 +15,16 @@ O SolidWorks é um software CAD popular que é amplamente utilizado na indústri
 Neste exemplo, você aprenderá como criar as suas variáveis personalizadas utilizando o Python e realizar a integração com o SolidWorks. Essas variáveis formarão a identidade dos modelos, proporcionando maior eficiência ao criar ou modificar seus componentes 3D no SolidWorks.
 <br>
 
+<div align="center">
+    <img src="src/images/f2.png" alt="demonstration" height="500px">
+</div>
+
 
 ## Dependências:
 No Python, para essa integração, usaremos apenas os recursos e bibliotecas nativas da linguagem.
 Como trata-se de uma integração, é necessário que o SolidWorks esteja devidamente instalado.
-É indicado conhecimento básico em SolidWorks ou em softwares de modelagem 3D similares.
+É indicado conhecimento básico em SolidWorks ou em softwares de modelagem 3D similares. <br>
+Nesta demonstração, foi utilizado a versão 2020 do SolidWorks.
 <br>
 <br>
 
@@ -77,11 +82,7 @@ Como trata-se de uma integração, é necessário que o SolidWorks esteja devida
     ...
 ```
 
-
-
 Como resultado do nosso exemplo, temos o nosso arquivo de texto com o seguinte conteúdo:
-
-
 
 ```
     "hole_diameter" = 3.0
@@ -91,17 +92,34 @@ Como resultado do nosso exemplo, temos o nosso arquivo de texto com o seguinte c
 ```
 
 </div>
+<br>
 
 ## PASSO 3 - Adicionar as variáveis ao SolidWorks
 
 <div>
     <p>
-        Agora, dentro do SoldWorks, precisamos acessar o painel de equações que pode ser encontrado na aba de ferramentas, como demonstrado na imagem.
+        Agora, dentro do SoldWorks, precisamos acessar o painel de equações que pode ser encontrado na aba de ferramentas, como demonstra a imagem à seguir:
     </p>
 </div>
 
+<div align="center">
 <img src="src/images/tool_equations.png" alt="equations" style="height: 500px;">
+</div>
 
+<div>
+    <p>
+        Dentro do painel, temos a opção de exportar ou importar as variáveis. No nosso caso, vamos importar.<br>
+        Após selecionar o botão importar, procure pelo arquivo, no formaro txt, com as nossas variáveis e pressione ok.<br>
+        Desta forma as variáveis geradas sempre serão atualizadas, conforme o arquivo selecionado.
+    </p>
+</div>
+
+<div align="center">
+    <img src="src/images/import.jpg" alt="equations" style="height: 250px;">
+</div>
+<br>
+
+## PASSO 4 - Aplicar as variáveis ao esboço
 
 
 <h4 align="center"> 
