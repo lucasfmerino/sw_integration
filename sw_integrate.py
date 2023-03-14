@@ -8,10 +8,15 @@ def hole_diameter():
         try:
             diameter = float(entry_01.get())
         except:
-            diameter = 10
+            diameter = 1
     else:
-        diameter = 10
+        diameter = 1
     return diameter
+
+
+def hole_perimeter():
+    perimeter = hole_diameter() * 3.141593
+    return perimeter
 
 
 def shear_stress():
@@ -36,7 +41,7 @@ def plate_thickness():
     return pt
 
 
-# FOLGA DA MATRIZ
+# FOLGA
 def die_clearance():
     ss = shear_stress()
     pt = plate_thickness()
@@ -53,7 +58,7 @@ def die_clearance():
 # FORÇA DE CORTE
 def cutting_force():
     if not entry_01.get() == '':
-        return shear_stress() * hole_diameter() * plate_thickness()
+        return shear_stress() * hole_perimeter() * plate_thickness()
     else:
         return 0
 
