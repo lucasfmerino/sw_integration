@@ -1,76 +1,90 @@
+
 <h1 align="center">
-  <img src="src/images/sw_integration_01.png" alt="sw_integration_01">
-</h1>
+    <img src="src/images/sw_integration_01.png" alt="sw_integration_01">
+</h1><br>
 
-Esta é uma demonstração simples para integrar o Python com o SolidWorks e melhorar a eficiência nos projetos e modelagem 3D.
+This is a simple demonstration to integrate Python with SolidWorks and improve efficiency in 3D modeling and projects.
 <br>
 
 
-## O Python e o Solid Works:
-O SolidWorks é um software CAD popular que é amplamente utilizado na indústria para projetar peças e montagens em 3D. A integração do Python com o SolidWorks pode permitir a automação de tarefas repetitivas, a execução de simulações e análises de dados e a criação de recursos personalizados.
+## The Python and the SolidWorks:
+
+The SolidWorks is a popular CAD software that is widely used in the industry to design 3D parts and assemblies. Integrating Python with SolidWorks can allow for the automation of repetitive tasks, running simulations and data analysis, and creating custom features.
+<br>
+
+This Python script calculates some variables related to tooling design and exports them to a TXT file. These variables can be used in SolidWorks to facilitate 3D modeling.
 <br>
 
 
-## Sobre esta demonstração:
-Neste exemplo, você aprenderá como criar as suas variáveis personalizadas utilizando o Python e realizar a integração com o SolidWorks. Essas variáveis formarão a identidade dos modelos, proporcionando maior eficiência ao criar ou modificar seus componentes 3D no SolidWorks.
+## Installation
+
+* Install Python 3.8 or newer.
+* Download or copy the script sw_integrate.py to your computer.
+* Download the 3D models, they should be located in the models folder, which in turn should be in the same directory as the sw_integrate.py script.
 <br>
 
+
+## GUI Interface
+
+The script has a simple GUI interface built with Tkinter. The input fields and output labels are displayed in a window with the following dimensions:
+<br>
+* Width: 280 pixels
+* Height: 240 pixels
+* The GUI window is not resizable.
+<br>
+
+
+## Usage
+
+* In SolidWorks, open the 3D model ASSEMBLY.SLDASM.
+* Open a command prompt or terminal window.
+* Navigate to the directory where sw_integrate.py is located.
+* Run the script using the command python sw_integrate.py.
+* Enter the required input values in the GUI window that appears.
+* Click the "Aplicar" button to export the variables to a TXT file.
+* The output file will be named reference_values.txt and will be located in the same directory as the script.
+* Update the model in SolidWorks.
+<br>
 <div align="center">
     <img src="src/images/f2.png" alt="demonstration" height="500px">
 </div>
-
-
-## Dependências:
-No Python, para essa integração, usaremos apenas os recursos e bibliotecas nativas da linguagem.
-Como trata-se de uma integração, é necessário que o SolidWorks esteja devidamente instalado.
-É indicado conhecimento básico em SolidWorks ou em softwares de modelagem 3D similares. <br>
-Nesta demonstração, foi utilizado a versão 2020 do SolidWorks.
-<br>
 <br>
 
 
-# MÃOS A OBRA 🛠
-## PASSO 1 - Conhecendo as Variáveis
-<div>
-    <p>
-        É muito importante identificar corretamente as variáveis do seu projeto, pois são elas as responsáveis pelas características e funcionalidades do seu produto.<br>
-        Neste exemplo, utilizarei como o modelo deste projeto, uma ferramenta de puncionadeira para estampagem de furos redondos em chapas metálicas.
-    </p>
-    <p>
-        Este modelo de ferramenta possuí três componentes, sendo eles: punção, extrator e matriz.
-    </p>
-    <p>
-        Temos então nossa primeira variável, o diâmetro do furo redondo. Repare que todos os componentes da ferramenta dependem desta variável. É o diâmetro do furo que determina a dimensão do punção e os outros componentes devem ser modelados de forma que, suas dimensões estejam referenciadas com o punção ou diretamente interligadas à nossa primeira variável.
-    </p>
-    <p>
-        Entender essa relação de dependências é essencial, para que a estrutura e a escolha dos recursos de modelagem possam garantir o resultado desejado.
-    </p>
-    <p>
-        Como o objetivo desta demonstração é realizar uma interação simples com o SolidWorks utilizando Python e não um tutorial de projeto de ferramentas, vamos direto para as próximas variáveis.
-    </p>
-    <p>
-        No punção, temos a próxima variável, o diâmetro da base. Essa dimensão deve variar conforme os parâmetros estabelecidos para a dimensão do furo.<br>
-        Temos uma ocorrência similar na matriz, onde o diâmetro da sua base também deve variar conforme os parâmetros de projeto.<br>
-        Ainda na matriz, será aplicada a folga de corte. Essa variável depende de outras variáveis para ser calculada. Toda essa resolução pode ser emplementada diretamente no código python, assim não precisamos adicionar as dependências da folga de corte ao software de modelagem.
-    </p>
-    <p>
-        Agora com as nossas variáveis definidas, sendo elas o diâmetro do furo, o diâmetro da base do punção, o diâmetro da base da matriz e a folga de corte, podemos dar sequência à nossa interação.
-    </p>
-    <br>
-</div>
+## Input Variables
 
-## PASSO 2 - Apresentar os Resultados
-<div>
-    <p>
-        O nosso próximo passo é apresentar o resultado das nossas variáveis so SolidWorks, em um formato que ele possa reconhecer e assim utilizar esses valores.
-    </p>
-    <p>
-        Sabendo disso, vamos utilizar o python para criar um arquivo de texto, contendo os valores calculados e adequadamente atribuidos às variáveis no seguinte formato:<br>
-        "nome_da_variável" = valor_atribuído
-    </p>
-    <p>
-        Podemos gerar o arquivo txt através do comando with open(f'{file_name}.txt', 'w') e utilizar o método writelines para escrever cada uma das nossas variáveis. Veja, como por exemplo, o trecho do nosso código:
-    </p>
+* Hole Diameter: The diameter of the hole in the tooling (in millimeters).
+* Shear Stress: The shear stress of the material being punched (in MPa).
+* Plate Thickness: The thickness of the plate being punched (in millimeters).
+<br>
+
+
+## Output Variables
+
+The following variables are calculated by the script and exported to the output file:
+<br>
+* hole_diameter: The hole diameter value entered by the user (in millimeters).
+* die_clearance: The clearance between the punch and die (in millimeters).
+* punch_base: The diameter of the punch base (in millimeters).
+* die_base: The diameter of the die base (in millimeters).
+* cutting_force: The cutting force required to punch the hole (in kilograms-force).
+<br>
+
+
+## Applying to custom projects:
+
+* Your code should generate the variables in a txt file, in the format below.
+
+```
+    "var_name" = value
+    "hole_diameter" = 3.0
+    "die_clearance" = 4.8
+    "punch_base" = 30
+    "die_base" = 60
+```
+<br>
+
+* For this, we can use the with open function, as exemplified in the sw_integration script.
 
 ```Python
     ...
@@ -82,46 +96,31 @@ Nesta demonstração, foi utilizado a versão 2020 do SolidWorks.
     ...
 ```
 
-Como resultado do nosso exemplo, temos o nosso arquivo de texto com o seguinte conteúdo:
-
-```
-    "hole_diameter" = 3.0
-    "die_clearance" = 4.8
-    "punch_base" = 30
-    "die_base" = 60
-```
-
+* In SolidWOrks, from the menu bar, go to Tools > Equations. A dialog box will appear. Import your txt file there.
+<div style="display: flex;">
+    <img src="src/images/tool_equations.png" alt="demonstration" height="400px">
+    <img src="src/images/import.png" alt="demonstration" height="400px">
 </div>
 <br>
 
-## PASSO 3 - Adicionar as variáveis ao SolidWorks
-
-<div>
-    <p>
-        Agora, dentro do SoldWorks, precisamos acessar o painel de equações que pode ser encontrado na aba de ferramentas, como demonstra a imagem à seguir:
-    </p>
-</div>
-
+* To link a global variable to a feature, simply type the global variable name in the cell next to the dimension or parameter that you want to link it to.
 <div align="center">
-<img src="src/images/tool_equations.png" alt="equations" style="height: 500px;">
-</div>
-
-<div>
-    <p>
-        Dentro do painel, temos a opção de exportar ou importar as variáveis. No nosso caso, vamos importar.<br>
-        Após selecionar o botão importar, procure pelo arquivo, no formaro txt, com as nossas variáveis e pressione ok.<br>
-        Desta forma as variáveis geradas sempre serão atualizadas, conforme o arquivo selecionado.
-    </p>
-</div>
-
-<div align="center">
-    <img src="src/images/import.jpg" alt="equations" style="height: 250px;">
+    <img src="src/images/assign_01.png" alt="demonstration" height="500px">
 </div>
 <br>
 
-## PASSO 4 - Aplicar as variáveis ao esboço
+* You can now edit the equations to add any necessary mathematical operations or use the global variables in other parts of the model.
+<div align="center">
+    <img src="src/images/dependent.png" alt="demonstration" height="500px">
+</div>
+<br>
 
+* Once you have linked all the global variables, save the design table and close it.
+<br>
 
-<h4 align="center"> 
-	🚧  🚀 Em construção...  🚧
-</h4>
+## License
+This script is licensed under the MIT License.
+<br>
+
+## Contact
+For any questions or comments, please contact the author.
