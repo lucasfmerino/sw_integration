@@ -97,9 +97,9 @@ The following variables are calculated by the script and exported to the output 
 ```
 
 * In SolidWOrks, from the menu bar, go to Tools > Equations. A dialog box will appear. Import your txt file there.
-<div style="display: flex;">
-    <img src="src/images/tool_equations.png" alt="demonstration" height="400px">
-    <img src="src/images/import.png" alt="demonstration" height="400px">
+<div style="display: flex;" align="center">
+    <img src="src/images/tool_equations2.png" alt="demonstration" height="300px">
+    <img src="src/images/import.png" alt="demonstration" height="300px">
 </div>
 <br>
 
