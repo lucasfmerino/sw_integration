@@ -111,7 +111,7 @@ The following variables are calculated by the script and exported to the output 
 
 * You can now edit the equations to add any necessary mathematical operations or use the global variables in other parts of the model.
 <div align="center">
-    <img src="src/images/dependent.png" alt="demonstration" height="500px">
+    <img src="src/images/dependent2.png" alt="demonstration" height="500px">
 </div>
 <br>
 
